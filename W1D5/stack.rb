@@ -1,17 +1,17 @@
 class Stack
-  def initialize
-    # create ivar to store stack here!
+  def initialize(main_array=[])
+    @main_array = main_array
   end
 
   def add(el)
-    # adds an element to the stack
+    @main_array.push(el)
   end
 
   def remove
-    # removes one element from the stack
+    @main_array.pop
   end
 
   def show
-    # return a copy of the stack
+    @main_array
   end
 end
