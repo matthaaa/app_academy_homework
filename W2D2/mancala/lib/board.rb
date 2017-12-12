@@ -71,5 +71,13 @@ class Board
   end
 
   def winner
+    case @cups[6] <=> @cups[13]
+    when 1
+      @name1
+    when -1
+      @name2
+    when 0
+      :draw
+    end
   end
 end
