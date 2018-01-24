@@ -12079,6 +12079,12 @@ var _root_reducer2 = _interopRequireDefault(_root_reducer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var configureStore = function configureStore() {
+  return (0, _redux.createStore)(_root_reducer2.default);
+};
+
+var store = configureStore();
+
 /***/ }),
 /* 107 */
 /***/ (function(module, exports, __webpack_require__) {
