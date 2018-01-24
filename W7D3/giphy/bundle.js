@@ -12156,7 +12156,13 @@ var _root = __webpack_require__(105);
 
 var _root2 = _interopRequireDefault(_root);
 
+var _api_util = __webpack_require__(115);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+window.fetchSearchGiphys = _api_util.fetchSearchGiphys;
+
+// Test
 
 /***/ }),
 /* 113 */
@@ -12184,10 +12190,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 /* 115 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: Unexpected token (1:30)\n\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m fetchSearchGiphys() \u001b[33m=\u001b[39m {\n \u001b[90m   | \u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 2 | \u001b[39m\n \u001b[90m 3 | \u001b[39m}\n \u001b[90m 4 | \u001b[39m\u001b[0m\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var fetchSearchGiphys = exports.fetchSearchGiphys = function fetchSearchGiphys(searchTerm) {
+  return $.ajax({
+    method: 'GET',
+    url: 'http://api.giphy.com/v1/gifs/search?q=' + searchTerm + '&api_key=dc6zaTOxFJmzC&limit=2'
+  });
+};
 
 /***/ }),
 /* 116 */
