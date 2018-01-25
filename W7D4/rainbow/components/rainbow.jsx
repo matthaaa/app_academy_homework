@@ -8,6 +8,7 @@ import {
 import Red from './red';
 import Green from './green';
 import Blue from './blue';
+import Indigo from './Indigo';
 import Violet from './violet';
 
 class Rainbow extends React.Component {
@@ -16,9 +17,13 @@ class Rainbow extends React.Component {
       <div>
         <h1>Rainbow Router!</h1>
         {/* Your links should go here */}
-
+        <Link to='/red' >Red</Link>
+        <Link to='/blue' >Blue Only</Link>
+        <Link to='/blue/indigo' >Add Indigo</Link>
         <div id="rainbow">
-          {/* Your routes should go here */}
+          <Route path="/red" component={Red} />
+          <Route path="/blue" component={Blue} />
+          <Route path="/blue/indigo" component={Indigo} />\
         </div>
       </div>
     );
