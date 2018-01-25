@@ -12526,9 +12526,9 @@ var Rainbow = function (_React$Component) {
           'Red'
         ),
         _react2.default.createElement(
-          _reactRouterDom.Link,
-          { to: '/blue' },
-          'Blue Only'
+          _reactRouterDom.NavLink,
+          { exact: true, to: '/blue' },
+          'Blue only'
         ),
         _react2.default.createElement(
           _reactRouterDom.Link,
