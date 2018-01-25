@@ -12476,6 +12476,10 @@ var _red = __webpack_require__(116);
 
 var _red2 = _interopRequireDefault(_red);
 
+var _orange = __webpack_require__(115);
+
+var _orange2 = _interopRequireDefault(_orange);
+
 var _green = __webpack_require__(113);
 
 var _green2 = _interopRequireDefault(_green);
@@ -12521,9 +12525,14 @@ var Rainbow = function (_React$Component) {
           'Rainbow Router!'
         ),
         _react2.default.createElement(
+          _reactRouterDom.NavLink,
+          { exact: true, to: '/red' },
+          'Red only'
+        ),
+        _react2.default.createElement(
           _reactRouterDom.Link,
-          { to: '/red' },
-          'Red'
+          { to: '/red/orange' },
+          'Add Orange'
         ),
         _react2.default.createElement(
           _reactRouterDom.NavLink,
@@ -12539,6 +12548,7 @@ var Rainbow = function (_React$Component) {
           'div',
           { id: 'rainbow' },
           _react2.default.createElement(_reactRouterDom.Route, { path: '/red', component: _red2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/red/orange', component: _orange2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/blue', component: _blue2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/blue/indigo', component: _Indigo2.default }),
           '\\'
